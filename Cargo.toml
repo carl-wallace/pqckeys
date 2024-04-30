@@ -1,6 +1,6 @@
 [package]
 name = "pqckeys"
-version = "0.1.0"
+version = "0.1.1"
 description = """
 Pure Rust implementation of key formats for various post quantum cryptographic algorithms.
 """
