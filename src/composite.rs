@@ -2,10 +2,9 @@
 
 use crate::oak::OneAsymmetricKey;
 use der::asn1::{BitString, OctetString};
-use spki::SubjectPublicKeyInfoOwned;
 
 /// CompositeSignaturePublicKey ::= SEQUENCE SIZE (2) OF BIT STRING
-pub type CompositeSignaturePublicKey = [SubjectPublicKeyInfoOwned; 2];
+pub type CompositeSignaturePublicKey = [BitString; 2];
 
 /// CompositeSignaturePublicKeyOs ::= OCTET STRING (CONTAINING CompositeSignaturePublicKey ENCODED BY der)
 pub type CompositeSignaturePublicKeyOs = OctetString;
