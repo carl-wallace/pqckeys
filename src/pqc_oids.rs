@@ -1,90 +1,125 @@
-//! OIDs for PQC algorithms as captured here: https://github.com/IETF-Hackathon/pqc-certificates/blob/master/docs/oid_mapping.md
+//! OIDs for PQC algorithms as captured in the IETF PQC Certificate hackathon's [OID mapping](https://github.com/IETF-Hackathon/pqc-certificates/blob/master/docs/oid_mapping.md)
 
 use const_oid::ObjectIdentifier;
 
-/// ML_DSA_44_IPD    1.3.6.1.4.1.2.267.12.4.4    ML_DSA_44_IPD
+/// 1.3.6.1.4.1.2.267.12.4.4
 pub const ML_DSA_44_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.6.1.4.1.2.267.12.4.4");
 
-/// ML_DSA_65_IPD    1.3.6.1.4.1.2.267.12.6.5*    ML_DSA_65_IPD
+/// 1.3.6.1.4.1.2.267.12.6.5
 pub const ML_DSA_65_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.6.1.4.1.2.267.12.6.5");
 
-/// ML_DSA_87_IPD    1.3.6.1.4.1.2.267.12.8.7*    ML_DSA_87_IPD
+/// 1.3.6.1.4.1.2.267.12.8.7
 pub const ML_DSA_87_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.6.1.4.1.2.267.12.8.7");
 
-/// Falcon-512                    1.3.9999.3.6*                Falcon-512
-pub const OQ_FALCON_512: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.6");
+/// 1.3.9999.3.6
+pub const FALCON_512: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.6");
 
-/// Falcon-1024                    1.3.9999.3.9*                Falcon-1024
-pub const OQ_FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.9");
+/// 1.3.9999.3.9
+pub const FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.9");
 
-/// SLH_DSA_SHA2_128F_IPD    1.3.9999.6.4.13*                SLH_DSA_SHA2_128F_IPD
+/// 1.3.9999.6.4.13
 pub const SLH_DSA_SHA2_128F_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.4.13");
 
-/// SLH_DSA_SHA2_128S_IPD        1.3.9999.6.4.16*            SLH_DSA_SHA2_128S_IPD
+/// 1.3.9999.6.4.16
 pub const SLH_DSA_SHA2_128S_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.4.16");
 
-/// SLH_DSA_SHA2_192F_IPD    1.3.9999.6.5.10*                SLH_DSA_SHA2_192F_IPD
+/// 1.3.9999.6.5.10
 pub const SLH_DSA_SHA2_192F_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.5.10");
 
-/// SLH_DSA_SHA2_192S_IPD    1.3.9999.6.5.12*                SLH_DSA_SHA2_192S_IPD
+/// 1.3.9999.6.5.12
 pub const SLH_DSA_SHA2_192S_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.5.12");
 
-/// SLH_DSA_SHA2_256F_IPD        1.3.9999.6.6.10*            SLH_DSA_SHA2_256F_IPD
+/// 1.3.9999.6.6.10
 pub const SLH_DSA_SHA2_256F_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.6.10");
 
-/// SLH_DSA_SHA2_256S_IPD        1.3.9999.6.6.12*           SLH_DSA_SHA2_256S_IPD
+/// 1.3.9999.6.6.12
 pub const SLH_DSA_SHA2_256S_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.6.12");
 
-/// SLH_DSA_SHAKE_128F_IPD    1.3.9999.6.7.13*                SLH_DSA_SHAKE_128F_IPD
+/// 1.3.9999.6.7.13
 pub const SLH_DSA_SHAKE_128F_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.9999.6.7.13");
 
-/// SLH_DSA_SHAKE_128S_IPD        1.3.9999.6.7.16*            SLH_DSA_SHAKE_128S_IPD
+/// 1.3.9999.6.7.16
 pub const SLH_DSA_SHAKE_128S_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.9999.6.7.16");
 
-/// SLH_DSA_SHAKE_192F_IPD    1.3.9999.6.8.10*                SLH_DSA_SHAKE_192F_IPD
+/// 1.3.9999.6.8.10
 pub const SLH_DSA_SHAKE_192F_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.9999.6.8.10");
 
-/// SLH_DSA_SHAKE_192S_IPD    1.3.9999.6.8.12*                SLH_DSA_SHAKE_192S_IPD
+/// 1.3.9999.6.8.12
 pub const SLH_DSA_SHAKE_192S_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.9999.6.8.12");
 
-/// SLH_DSA_SHAKE_256F_IPD        1.3.9999.6.9.10*            SLH_DSA_SHAKE_256F_IPD
+/// 1.3.9999.6.9.10
 pub const SLH_DSA_SHAKE_256F_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.9999.6.9.10");
 
-/// SLH_DSA_SHAKE_256S_IPD        1.3.9999.6.9.12*           SLH_DSA_SHAKE_256S_IPD
+/// 1.3.9999.6.9.12
 pub const SLH_DSA_SHAKE_256S_IPD: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.9999.6.9.12");
 
-// Old Composite OIDs
-/// COMPOSITE-Signature            1.3.6.1.4.1.18227.2.1            COMPOSITE-Signature
-pub const ENTU_COMPOSITE_SIG: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.18227.2.1");
+/// 1.3.6.1.4.1.22554.5.6.1
+pub const ML_KEM_512_IPD: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.22554.5.6.1");
+/// 1.3.6.1.4.1.22554.5.6.2
+pub const ML_KEM_768_IPD: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.22554.5.6.2");
+/// 1.3.6.1.4.1.22554.5.6.3
+pub const ML_KEM_1024_IPD: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.22554.5.6.3");
 
-/// COMPOSITE-KEY                2.16.840.1.114027.80.4.1        COMPOSITE-KEY
-pub const ENTU_COMPOSITE_KEY: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.4.1");
+/// 2.16.840.1.114027.80.8.1.1
+pub const ML_DSA_44_RSA2048_PSS_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.1");
 
-///    id-composite-key OBJECT IDENTIFIER ::= {
-///        joint-iso-itu-t(2) country(16) us(840) organization(1) entrust(114027)
-///        Algorithm(80) Composite(4) CompositeKey(1) }
-pub const ENTU_COMPOSITE_KEY_ID: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.4.1");
+/// 2.16.840.1.114027.80.8.1.2
+pub const ML_DSA_44_RSA2048_PKCS15_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.2");
 
-///    id-Dilithium3-ECDSA-P256 OBJECT IDENTIFIER ::= {
-///      joint-iso-itu-t(2) country(16) us(840) organization(1) entrust(114027)
-///      algorithm(80) ExplicitCompositeKey(5) id-Dilithium3-ECDSA-P256(1) }
-pub const ENTU_DILITHIUM3_ECDSA_P256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.1");
+/// 2.16.840.1.114027.80.8.1.3
+pub const ML_DSA_44_ED25519_PKCS15_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.3");
 
-///    id-Dilithium3-RSA OBJECT IDENTIFIER ::= {
-///      joint-iso-itu-t(2) country(16) us(840) organization(1) entrust(114027)
-///      algorithm(80) ExplicitCompositeKey(5) id-Dilithium3-RSA(2) }
-pub const ENTU_DILITHIUM3_RSA: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2");
+/// 2.16.840.1.114027.80.8.1.4
+pub const ML_DSA_44_ECDSA_P256_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.4");
+
+/// 2.16.840.1.114027.80.8.1.5
+pub const ML_DSA_44_ECDSA_BRAINPOOL_P256R1_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.5");
+
+/// 2.16.840.1.114027.80.8.1.6
+pub const ML_DSA_65_RSA3072_PSS_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.6");
+
+/// 2.16.840.1.114027.80.8.1.7
+pub const ML_DSA_65_RSA3072_PKCS15_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.7");
+
+/// 2.16.840.1.114027.80.8.1.8
+pub const ML_DSA_65_ECDSA_P256_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.8");
+
+/// 2.16.840.1.114027.80.8.1.9
+pub const ML_DSA_65_ECDSA_BRAINPOOL_P256R1_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.9");
+
+/// 2.16.840.1.114027.80.8.1.10
+pub const ML_DSA_65_ED25519_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.10");
+
+/// 2.16.840.1.114027.80.8.1.11
+pub const ML_DSA_87_ECDSA_P384_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.11");
+
+/// 2.16.840.1.114027.80.8.1.12
+pub const ML_DSA_87_ECDSA_BRAINPOOL_P384R1_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.12");
+
+/// 2.16.840.1.114027.80.8.1.13
+pub const ML_DSA_87_ED448_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.8.1.13");

@@ -1,24 +1,20 @@
-//! Composite key-related types as defined in draft-ounsworth-pq-composite-keys-03 and draft-ounsworth-pq-composite-sigs-07
+//! Composite signature-related types as defined in [draft-ounsworth-pq-composite-sigs-13](https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-sigs-13)
 
 use crate::oak::OneAsymmetricKey;
-use alloc::vec::Vec;
 use der::asn1::{BitString, OctetString};
-use spki::{AlgorithmIdentifierOwned, SubjectPublicKeyInfoOwned};
+use spki::SubjectPublicKeyInfoOwned;
 
-/// CompositePublicKey ::= SEQUENCE SIZE (2..MAX) OF SubjectPublicKeyInfo
-pub type CompositePublicKey = Vec<SubjectPublicKeyInfoOwned>;
+/// CompositeSignaturePublicKey ::= SEQUENCE SIZE (2) OF BIT STRING
+pub type CompositeSignaturePublicKey = [SubjectPublicKeyInfoOwned; 2];
 
-/// CompositePublicKeyOs ::= OCTET STRING (CONTAINING CompositePublicKey ENCODED BY der)
-pub type CompositePublicKeyOs = OctetString;
+/// CompositeSignaturePublicKeyOs ::= OCTET STRING (CONTAINING CompositeSignaturePublicKey ENCODED BY der)
+pub type CompositeSignaturePublicKeyOs = OctetString;
 
-/// CompositePublicKeyBs ::= BIT STRING (CONTAINING CompositePublicKey ENCODED BY der)
+/// CompositeSignaturePublicKeyBs ::= BIT STRING (CONTAINING CompositeSignaturePublicKey ENCODED BY der)
 pub type CompositePublicKeyBs = BitString;
 
-/// CompositePrivateKey ::= SEQUENCE SIZE (2..MAX) OF OneAsymmetricKey
-pub type CompositePrivateKey = Vec<OneAsymmetricKey>;
+/// CompositeSignaturePrivateKey ::= SEQUENCE SIZE (2) OF OneAsymmetricKey
+pub type CompositeSignaturePrivateKey = [OneAsymmetricKey; 2];
 
-/// CompositeParams ::= SEQUENCE SIZE (2..MAX) OF AlgorithmIdentifier
-pub type CompositeParams = Vec<AlgorithmIdentifierOwned>;
-
-/// CompositeSignatureValue ::= SEQUENCE SIZE (2..MAX) OF BIT STRING
-pub type CompositeSignatureValue = Vec<BitString>;
+/// CompositeSignatureValue ::= SEQUENCE SIZE (2) OF BIT STRING
+pub type CompositeSignatureValue = [BitString; 2];
