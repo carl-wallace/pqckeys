@@ -14,11 +14,11 @@ edition = "2021"
 rust-version = "1.56"
 
 [dependencies]
-der = { version = "0.7.6", features = ["oid", "derive", "alloc"] }
-x509-cert = { version = "0.2.3", default-features = false }
-const-oid = { version = "0.9.2", features = ["db"] }
-spki = { version = "0.7.2", features = ["alloc"] }
-cms = { version = "0.2.1" }
+der = { version = "0.8.0-pre.0", features = ["oid", "derive", "alloc"] }
+x509-cert = { version = "0.3.0-pre", default-features = false }
+const-oid = { version = "0.10.0-pre.2", features = ["db"] }
+spki = { version = "0.8.0-pre.0", features = ["alloc"] }
+cms = { version = "0.3.0-pre" }
 flagset = { version = "0.4.3" }
 
 [dev-dependencies]
@@ -32,3 +32,11 @@ pem = ["alloc", "der/pem"]
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
+
+[patch.crates-io]
+cms = { git = "https://github.com/RustCrypto/formats.git" }
+const-oid = { git = "https://github.com/RustCrypto/formats.git" }
+der = { git = "https://github.com/RustCrypto/formats.git" }
+der_derive = { git = "https://github.com/RustCrypto/formats.git" }
+spki = { git = "https://github.com/RustCrypto/formats.git" }
+x509-cert = { git = "https://github.com/RustCrypto/formats.git" }
