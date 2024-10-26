@@ -32,6 +32,27 @@ pub const ML_DSA_65: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1
 /// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
 pub const ML_DSA_87: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.19");
 
+/// OID for the pre-hash ML-DSA-44 parameter set as defined in [NIST CSOR].
+/// ```text
+/// id-hash-ml-dsa-44-with-sha512 OBJECT IDENTIFIER ::= { sigAlgs 32 }
+/// ```
+/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
+pub const ML_DSA_44_WITH_SHA512: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.32");
+
+/// OID for the pre-hash ML-DSA-65 parameter set as defined in [NIST CSOR].
+/// ```text
+/// id-ml-dsa-65-with-sha512 OBJECT IDENTIFIER ::= { sigAlgs 33}
+/// ```
+/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
+pub const ML_DSA_65_WITH_SHA512: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.33");
+
+/// OID for the pre-hash ML-DSA-87 parameter set as defined in [NIST CSOR].
+/// ```text
+/// id-ml-dsa-87-with-sha512 OBJECT IDENTIFIER ::= { sigAlgs 34}
+/// ```
+/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
+pub const ML_DSA_87_WITH_SHA512: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.34");
+
 /// OID for the SLH-DSA-SHA2-128s parameter set as defined in [NIST CSOR].
 /// ```text
 /// id-slh-dsa-sha2-128s OBJECT IDENTIFIER ::= { sigAlgs 20 }
