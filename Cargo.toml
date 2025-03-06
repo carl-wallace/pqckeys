@@ -10,19 +10,19 @@ repository = "https://github.com/RustCrypto/formats/tree/master/x509"
 categories = ["cryptography", "data-structures", "encoding", "no-std"]
 keywords = ["crypto"]
 readme = "README.md"
-edition = "2021"
-rust-version = "1.56"
+edition = "2024"
+rust-version = "1.85.0"
 
 [dependencies]
-der = { version = "0.8.0-pre.0", features = ["oid", "derive", "alloc"] }
-x509-cert = { version = "0.3.0-pre", default-features = false }
-const-oid = { version = "0.10.0-pre.2", features = ["db"] }
-spki = { version = "0.8.0-pre.0", features = ["alloc"] }
-cms = { version = "0.3.0-pre" }
-flagset = { version = "0.4.3" }
+der = { version = "0.8.0-rc.1", features = ["oid", "derive", "alloc"] }
+x509-cert = { version = "0.3.0-pre.0", default-features = false }
+const-oid = { version = "0.10.0-rc.2", features = ["db"] }
+spki = { version = "0.8.0-rc.1", features = ["alloc"] }
+cms = { version = "0.3.0-pre.0" }
+flagset = { version = "0.4.6" }
 
 [dev-dependencies]
-hex-literal = "0.3"
+hex-literal = "1.0.0"
 
 [features]
 alloc = ["der/alloc"]

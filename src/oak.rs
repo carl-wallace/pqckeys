@@ -3,6 +3,8 @@
 use alloc::vec::Vec;
 use der::asn1::{BitString, OctetString};
 use der::{Enumerated, Sequence};
+#[cfg(feature = "pem")]
+use der::pem::PemLabel;
 use spki::AlgorithmIdentifierOwned;
 use x509_cert::attr::Attributes;
 
@@ -47,6 +49,12 @@ pub struct OneAsymmetricKey {
     )]
     pub public_key: Option<PublicKey>,
 }
+
+#[cfg(feature = "pem")]
+impl PemLabel for OneAsymmetricKey {
+    const PEM_LABEL: &'static str = "PRIVATE KEY";
+}
+
 
 /// PrivateKeyInfo as defined in [RFC 5958 Section 2].
 /// ```text
