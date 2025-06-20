@@ -4,22 +4,20 @@ version = "0.1.1"
 description = """
 Pure Rust implementation of key formats for various post quantum cryptographic algorithms.
 """
-authors = ["RustCrypto Developers"]
-license = "Apache-2.0 OR MIT"
-repository = "https://github.com/RustCrypto/formats/tree/master/x509"
-categories = ["cryptography", "data-structures", "encoding", "no-std"]
+categories = ["cryptography", "data-structures", "encoding", "no-std", "pqc"]
 keywords = ["crypto"]
 readme = "README.md"
 edition = "2024"
 rust-version = "1.85.0"
 
 [dependencies]
-der = { version = "0.8.0-rc.1", features = ["oid", "derive", "alloc"] }
-x509-cert = { version = "0.3.0-pre.0", default-features = false }
-const-oid = { version = "0.10.0-rc.2", features = ["db"] }
-spki = { version = "0.8.0-rc.1", features = ["alloc"] }
 cms = { version = "0.3.0-pre.0" }
-flagset = { version = "0.4.6" }
+const-oid = { version = "0.10.1", features = ["db"] }
+der = { version = "0.8.0-rc.4", features = ["oid", "derive", "alloc"] }
+spki = { version = "0.8.0-rc.2", features = ["alloc"] }
+x509-cert = { version = "0.3.0-rc.0", default-features = false }
+
+flagset = { version = "0.4.7" }
 
 [dev-dependencies]
 hex-literal = "1.0.0"
@@ -34,9 +32,8 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [patch.crates-io]
-cms = { git = "https://github.com/RustCrypto/formats.git" }
-const-oid = { git = "https://github.com/RustCrypto/formats.git" }
-der = { git = "https://github.com/RustCrypto/formats.git" }
+cms        = { git = "https://github.com/RustCrypto/formats.git" }
+der        = { git = "https://github.com/RustCrypto/formats.git" }
 der_derive = { git = "https://github.com/RustCrypto/formats.git" }
-spki = { git = "https://github.com/RustCrypto/formats.git" }
-x509-cert = { git = "https://github.com/RustCrypto/formats.git" }
+spki       = { git = "https://github.com/RustCrypto/formats.git" }
+x509-cert  = { git = "https://github.com/RustCrypto/formats.git" }
