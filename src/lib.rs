@@ -18,6 +18,5 @@ extern crate alloc;
 #[cfg(feature = "std")]
 extern crate std;
 
-pub mod composite;
 pub mod oak;
 pub mod pqc_oids;
