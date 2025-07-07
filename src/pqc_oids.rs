@@ -72,6 +72,8 @@ pub const ID_MLDSA44_ED25519_SHA512: ObjectIdentifier =
 pub const ID_MLDSA44_ECDSA_P256_SHA256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.9.1.3");
 pub const ID_MLDSA65_RSA3072_PSS_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.9.1.4");
+pub const ID_MLDSA65_RSA3072_PKCS15_SHA512: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.9.1.5");
 pub const ID_MLDSA65_RSA4096_PSS_SHA512: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.9.1.6");
