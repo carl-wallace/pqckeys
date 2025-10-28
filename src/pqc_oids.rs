@@ -24,29 +24,29 @@ pub const OQ_FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9
 // Definitions are from [draft-ietf-lamps-pq-composite-kem-08](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-08)
 // and [draft-ietf-lamps-pq-composite-sigs-12](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-12).
 //---------------------------------------------------------------------
-pub const ID_MLKEM768_RSA2048_SHA3_SHA256: ObjectIdentifier =
+pub const ID_MLKEM768_RSA2048_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.62");
-pub const ID_MLKEM768_RSA3072_SHA3_SHA256: ObjectIdentifier =
+pub const ID_MLKEM768_RSA3072_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.63");
-pub const ID_MLKEM768_RSA4096_SHA3_SHA256: ObjectIdentifier =
+pub const ID_MLKEM768_RSA4096_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.64");
 pub const ID_MLKEM768_X25519_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.65");
-pub const ID_MLKEM768_ECDH_P256_SHA3_SHA256: ObjectIdentifier =
+pub const ID_MLKEM768_ECDH_P256_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.66");
-pub const ID_MLKEM768_ECDH_P384_SHA3_SHA256: ObjectIdentifier =
+pub const ID_MLKEM768_ECDH_P384_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.67");
-pub const ID_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_SHA256: ObjectIdentifier =
+pub const ID_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.68");
-pub const ID_MLKEM1024_RSA3072_SHA3_SHA512: ObjectIdentifier =
+pub const ID_MLKEM1024_RSA3072_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.69");
-pub const ID_MLKEM1024_ECDH_P384_SHA3_SHA512: ObjectIdentifier =
+pub const ID_MLKEM1024_ECDH_P384_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.70");
-pub const ID_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_SHA512: ObjectIdentifier =
+pub const ID_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.71");
 pub const ID_MLKEM1024_X448_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.72");
-pub const ID_MLKEM1024_ECDH_P521_SHA3_SHA512: ObjectIdentifier =
+pub const ID_MLKEM1024_ECDH_P521_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.73");
 
 pub const DS_MLKEM768_RSA2048_HMAC_SHA256: [u8; 13] = hex!("060B6086480186FA6B50050232");
