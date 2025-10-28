@@ -49,42 +49,21 @@ pub const ID_MLKEM1024_X448_SHA3_256: ObjectIdentifier =
 pub const ID_MLKEM1024_ECDH_P521_SHA3_256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.73");
 
-pub const DS_MLKEM768_RSA2048_HMAC_SHA256: [u8; 13] = hex!("060B6086480186FA6B50050232");
-pub const DS_MLKEM768_RSA3072_HMAC_SHA256: [u8; 13] = hex!("060B6086480186FA6B50050233");
-pub const DS_MLKEM768_RSA4096_HMAC_SHA256: [u8; 13] = hex!("060B6086480186FA6B50050234");
-pub const DS_MLKEM768_X25519_SHA3_256: [u8; 13] = hex!("060B6086480186FA6B50050235");
-pub const DS_MLKEM768_ECDH_P256_HMAC_SHA256: [u8; 13] = hex!("060B6086480186FA6B50050236");
-pub const DS_MLKEM768_ECDH_P384_HMAC_SHA256: [u8; 13] = hex!("060B6086480186FA6B50050237");
-pub const DS_MLKEM768_ECDH_BRAINPOOL_P256R1_HMAC_SHA256: [u8; 13] =
-    hex!("060B6086480186FA6B50050238");
-pub const DS_MLKEM1024_RSA3072_HMAC_SHA512: [u8; 13] = hex!("060B6086480186FA6B5005023D");
-pub const DS_MLKEM1024_ECDH_P384_HMAC_SHA512: [u8; 13] = hex!("060B6086480186FA6B50050239");
-pub const DS_MLKEM1024_ECDH_BRAINPOOL_P384R1_HMAC_SHA512: [u8; 13] =
-    hex!("060B6086480186FA6B5005023A");
-pub const DS_MLKEM1024_X448_SHA3_256: [u8; 13] = hex!("060B6086480186FA6B5005023B");
-pub const DS_MLKEM1024_ECDH_P521_HMAC_SHA512: [u8; 13] = hex!("060B6086480186FA6B5005023C");
+pub const DS_MLKEM768_RSA2048_SHA3_256: &[u8; 32] = b"QSF-MLKEM768-RSAOAEP2048-SHA3256";
+pub const DS_MLKEM768_RSA3072_SHA3_256: &[u8; 32] = b"QSF-MLKEM768-RSAOAEP3072-SHA3256";
+pub const DS_MLKEM768_RSA4096_SHA3_256: &[u8; 32] = b"QSF-MLKEM768-RSAOAEP4096-SHA3256";
+pub const DS_MLKEM768_X25519_SHA3_256: [u8; 6] = hex!("5C2E2F2F5E5C"); // \.//^\
+pub const DS_MLKEM768_ECDH_P256_SHA3_256: &[u8; 25] = b"QSF-MLKEM768-P256-SHA3256";
+pub const DS_MLKEM768_ECDH_P384_SHA3_256: &[u8; 25] = b"QSF-MLKEM768-P384-SHA3256";
+pub const DS_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: &[u8; 26] =
+    b"QSF-MLKEM768-BP256-SHA3256";
+pub const DS_MLKEM1024_RSA3072_SHA3_256: &[u8; 33] = b"QSF-MLKEM1024-RSAOAEP3072-SHA3256";
+pub const DS_MLKEM1024_ECDH_P384_SHA3_256: &[u8; 26] = b"QSF-MLKEM1024-P384-SHA3256";
+pub const DS_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: &[u8; 27] =
+    b"QSF-MLKEM1024-BP384-SHA3256";
+pub const DS_MLKEM1024_X448_SHA3_256: &[u8; 26] = b"QSF-MLKEM1024-X448-SHA3256";
+pub const DS_MLKEM1024_ECDH_P521_SHA3_256: &[u8; 26] = b"QSF-MLKEM1024-P521-SHA3256";
 
-/*
-iso(1) org(3) dod(6) internet(1) security(5) mechanisms(5)  pkix(7) alg(6)
-37	id-MLDSA44-RSA2048-PSS-SHA256	[draft-ietf-lamps-pq-composite-sigs-12]
-38	id-MLDSA44-RSA2048-PKCS15-SHA256	[draft-ietf-lamps-pq-composite-sigs-12]
-39	id-MLDSA44-Ed25519-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-40	id-MLDSA44-ECDSA-P256-SHA256	[draft-ietf-lamps-pq-composite-sigs-12]
-41	id-MLDSA65-RSA3072-PSS-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-42	id-MLDSA65-RSA3072-PKCS15-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-43	id-MLDSA65-RSA4096-PSS-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-44	id-MLDSA65-RSA4096-PKCS15-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-45	id-MLDSA65-ECDSA-P256-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-46	id-MLDSA65-ECDSA-P384-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-47	id-MLDSA65-ECDSA-brainpoolP256r1-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-48	id-MLDSA65-Ed25519-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-49	id-MLDSA87-ECDSA-P384-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-50	id-MLDSA87-ECDSA-brainpoolP384r1-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-51	id-MLDSA87-Ed448-SHAKE256	[draft-ietf-lamps-pq-composite-sigs-12]
-52	id-MLDSA87-RSA3072-PSS-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-53	id-MLDSA87-RSA4096-PSS-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
-54	id-MLDSA87-ECDSA-P521-SHA512	[draft-ietf-lamps-pq-composite-sigs-12]
- */
 pub const ID_MLDSA44_RSA2048_PSS_SHA256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.37");
 pub const ID_MLDSA44_RSA2048_PKCS15_SHA256: ObjectIdentifier =
