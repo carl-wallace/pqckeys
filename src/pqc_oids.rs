@@ -25,44 +25,45 @@ pub const OQ_FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9
 // and [draft-ietf-lamps-pq-composite-sigs-12](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-12).
 //---------------------------------------------------------------------
 pub const ID_MLKEM768_RSA2048_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.62");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.74");
 pub const ID_MLKEM768_RSA3072_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.63");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.75");
 pub const ID_MLKEM768_RSA4096_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.64");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.76");
 pub const ID_MLKEM768_X25519_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.65");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.77");
 pub const ID_MLKEM768_ECDH_P256_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.66");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.78");
 pub const ID_MLKEM768_ECDH_P384_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.67");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.79");
 pub const ID_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.68");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.80");
 pub const ID_MLKEM1024_RSA3072_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.69");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.81");
 pub const ID_MLKEM1024_ECDH_P384_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.70");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.82");
 pub const ID_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.71");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.83");
 pub const ID_MLKEM1024_X448_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.72");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.84");
 pub const ID_MLKEM1024_ECDH_P521_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.73");
+    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.85");
 
-pub const DS_MLKEM768_RSA2048_SHA3_256: &[u8; 32] = b"QSF-MLKEM768-RSAOAEP2048-SHA3256";
-pub const DS_MLKEM768_RSA3072_SHA3_256: &[u8; 32] = b"QSF-MLKEM768-RSAOAEP3072-SHA3256";
-pub const DS_MLKEM768_RSA4096_SHA3_256: &[u8; 32] = b"QSF-MLKEM768-RSAOAEP4096-SHA3256";
+pub const DS_MLKEM768_RSA2048_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP2048";
+pub const DS_MLKEM768_RSA3072_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP3072";
+pub const DS_MLKEM768_RSA4096_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP4096";
 pub const DS_MLKEM768_X25519_SHA3_256: [u8; 6] = hex!("5C2E2F2F5E5C"); // \.//^\
-pub const DS_MLKEM768_ECDH_P256_SHA3_256: &[u8; 25] = b"QSF-MLKEM768-P256-SHA3256";
-pub const DS_MLKEM768_ECDH_P384_SHA3_256: &[u8; 25] = b"QSF-MLKEM768-P384-SHA3256";
-pub const DS_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: &[u8; 26] =
-    b"QSF-MLKEM768-BP256-SHA3256";
-pub const DS_MLKEM1024_RSA3072_SHA3_256: &[u8; 33] = b"QSF-MLKEM1024-RSAOAEP3072-SHA3256";
-pub const DS_MLKEM1024_ECDH_P384_SHA3_256: &[u8; 26] = b"QSF-MLKEM1024-P384-SHA3256";
-pub const DS_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: &[u8; 27] =
-    b"QSF-MLKEM1024-BP384-SHA3256";
-pub const DS_MLKEM1024_X448_SHA3_256: &[u8; 26] = b"QSF-MLKEM1024-X448-SHA3256";
-pub const DS_MLKEM1024_ECDH_P521_SHA3_256: &[u8; 26] = b"QSF-MLKEM1024-P521-SHA3256";
+pub const DS_MLKEM768_ECDH_P256_SHA3_256: &[u8; 13] = b"MLKEM768-P256";
+pub const DS_MLKEM768_ECDH_P384_SHA3_256: &[u8; 13] = b"MLKEM768-P384";
+pub const DS_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: &[u8; 14] =
+    b"MLKEM768-BP256";
+pub const DS_MLKEM1024_RSA3072_SHA3_256: &[u8; 21] = b"MLKEM1024-RSAOAEP3072";
+pub const DS_MLKEM1024_ECDH_P384_SHA3_256: &[u8; 14] = b"MLKEM1024-P384";
+pub const DS_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: &[u8; 15] =
+    b"MLKEM1024-BP384";
+pub const DS_MLKEM1024_X448_SHA3_256: &[u8; 14] = b"MLKEM1024-X448";
+pub const DS_MLKEM1024_ECDH_P521_SHA3_256: &[u8; 14] = b"MLKEM1024-P521";
+
 
 pub const ID_MLDSA44_RSA2048_PSS_SHA256: ObjectIdentifier =
     ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.37");
