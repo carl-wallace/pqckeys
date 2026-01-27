@@ -25,29 +25,29 @@ pub const OQ_FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9
 // and [draft-ietf-lamps-pq-composite-sigs-12](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-12).
 //---------------------------------------------------------------------
 pub const ID_MLKEM768_RSA2048_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.74");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.55");
 pub const ID_MLKEM768_RSA3072_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.75");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.56");
 pub const ID_MLKEM768_RSA4096_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.76");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.57");
 pub const ID_MLKEM768_X25519_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.77");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.58");
 pub const ID_MLKEM768_ECDH_P256_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.78");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.59");
 pub const ID_MLKEM768_ECDH_P384_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.79");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.60");
 pub const ID_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.80");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.61");
 pub const ID_MLKEM1024_RSA3072_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.81");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.62");
 pub const ID_MLKEM1024_ECDH_P384_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.82");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.63");
 pub const ID_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.83");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.64");
 pub const ID_MLKEM1024_X448_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.84");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.65");
 pub const ID_MLKEM1024_ECDH_P521_SHA3_256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2.85");
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.66");
 
 pub const DS_MLKEM768_RSA2048_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP2048";
 pub const DS_MLKEM768_RSA3072_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP3072";
