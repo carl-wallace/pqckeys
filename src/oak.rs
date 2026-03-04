@@ -41,12 +41,7 @@ pub struct OneAsymmetricKey {
         optional = "true"
     )]
     pub attributes: Option<Attributes>,
-    #[asn1(
-        context_specific = "1",
-        tag_mode = "IMPLICIT",
-        constructed = "true",
-        optional = "true"
-    )]
+    #[asn1(context_specific = "1", tag_mode = "IMPLICIT", optional = "true")]
     pub public_key: Option<PublicKey>,
 }
 
