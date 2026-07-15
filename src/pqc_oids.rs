@@ -14,11 +14,21 @@ use const_oid::ObjectIdentifier;
 use hex_literal::hex;
 
 // HACKATHON OIDs (NON-STANDARD - DO NOT USE)
+// These are the OQS/open-quantum-safe OID assignments for the NIST round-3 Falcon
+// finalist. The `PADDED` variants denote the fixed-length ("padded") signature
+// encoding; the non-padded variants use the variable-length compressed encoding.
+// FN-DSA (the FIPS name for standardized Falcon) has no published OID yet.
 /// Falcon-512                    1.3.9999.3.6*
 pub const OQ_FALCON_512: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.6");
 
 /// Falcon-1024                    1.3.9999.3.9*
 pub const OQ_FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.9");
+
+/// Falcon-padded-512             1.3.9999.3.11*
+pub const OQ_FALCON_PADDED_512: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.11");
+
+/// Falcon-padded-1024            1.3.9999.3.14*
+pub const OQ_FALCON_PADDED_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.14");
 
 //---------------------------------------------------------------------
 // Definitions are from [draft-ietf-lamps-pq-composite-kem-08](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-08)
