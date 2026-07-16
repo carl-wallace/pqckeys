@@ -8,210 +8,124 @@
 //!    sigAlgs OBJECT IDENTIFIER ::= { nistAlgorithms 3 }
 //! ```
 //! [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
+#![allow(missing_docs)]
 
 use const_oid::ObjectIdentifier;
-
-/// OID for the ML-DSA-44 parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-ml-dsa-44 OBJECT IDENTIFIER ::= { sigAlgs 17 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const ML_DSA_44: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.17");
-
-/// OID for the ML-DSA-65 parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-ml-dsa-65 OBJECT IDENTIFIER ::= { sigAlgs 18}
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const ML_DSA_65: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.18");
-
-/// OID for the ML-DSA-87 parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-ml-dsa-87 OBJECT IDENTIFIER ::= { sigAlgs 19}
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const ML_DSA_87: ObjectIdentifier = ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.19");
-
-/// OID for the SLH-DSA-SHA2-128s parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-sha2-128s OBJECT IDENTIFIER ::= { sigAlgs 20 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHA2_128S: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.20");
-
-/// OID for the SLH-DSA-SHA2-128f parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-sha2-128f OBJECT IDENTIFIER ::= { sigAlgs 21 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHA2_128F: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.21");
-
-/// OID for the SLH-DSA-SHA2-192s parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-sha2-192s OBJECT IDENTIFIER ::= { sigAlgs 22 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHA2_192S: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.22");
-
-/// OID for the SLH-DSA-SHA2-192f parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-sha2-192f OBJECT IDENTIFIER ::= { sigAlgs 23 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHA2_192F: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.23");
-
-/// OID for the SLH-DSA-SHA2-256s parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-sha2-256s OBJECT IDENTIFIER ::= { sigAlgs 24 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHA2_256S: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.24");
-
-/// OID for the SLH-DSA-SHA2-256f parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-sha2-256f OBJECT IDENTIFIER ::= { sigAlgs 25 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHA2_256F: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.25");
-
-/// OID for the SLH-DSA-SHAKE-128s parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-shake-128s OBJECT IDENTIFIER ::= { sigAlgs 26 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHAKE_128S: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.26");
-
-/// OID for the SLH-DSA-SHAKE-128f parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-shake-128f OBJECT IDENTIFIER ::= { sigAlgs 27 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHAKE_128F: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.27");
-
-/// OID for the SLH-DSA-SHAKE-192s parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-shake-192s OBJECT IDENTIFIER ::= { sigAlgs 28 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHAKE_192S: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.28");
-
-/// OID for the SLH-DSA-SHAKE-192f parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-shake-192f OBJECT IDENTIFIER ::= { sigAlgs 29 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHAKE_192F: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.29");
-
-/// OID for the SLH-DSA-SHAKE-256s parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-shake-256s OBJECT IDENTIFIER ::= { sigAlgs 30 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHAKE_256S: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.30");
-
-/// OID for the SLH-DSA-SHAKE-256f parameter set as defined in [NIST CSOR].
-/// ```text
-/// id-slh-dsa-shake-256f OBJECT IDENTIFIER ::= { sigAlgs 31 }
-/// ```
-/// [NIST CSOR]: https://csrc.nist.gov/projects/computer-security-objects-register/algorithm-registration#DSA
-pub const SLH_DSA_SHAKE_256F: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.101.3.4.3.31");
+use hex_literal::hex;
 
 // HACKATHON OIDs (NON-STANDARD - DO NOT USE)
-/// ML_DSA_44_IPD    1.3.6.1.4.1.2.267.12.4.4
-pub const ML_DSA_44_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.2.267.12.4.4");
-
-/// ML_DSA_65_IPD    1.3.6.1.4.1.2.267.12.6.5*
-pub const ML_DSA_65_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.2.267.12.6.5");
-
-/// ML_DSA_87_IPD    1.3.6.1.4.1.2.267.12.8.7*
-pub const ML_DSA_87_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.2.267.12.8.7");
-
+// These are the OQS/open-quantum-safe OID assignments for the NIST round-3 Falcon
+// finalist. The `PADDED` variants denote the fixed-length ("padded") signature
+// encoding; the non-padded variants use the variable-length compressed encoding.
+// FN-DSA (the FIPS name for standardized Falcon) has no published OID yet.
 /// Falcon-512                    1.3.9999.3.6*
 pub const OQ_FALCON_512: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.6");
 
 /// Falcon-1024                    1.3.9999.3.9*
 pub const OQ_FALCON_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.9");
 
-/// SLH_DSA_SHA2_128F_IPD    1.3.9999.6.4.13*
-pub const SLH_DSA_SHA2_128F_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.4.13");
+/// Falcon-padded-512             1.3.9999.3.11*
+pub const OQ_FALCON_PADDED_512: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.11");
 
-/// SLH_DSA_SHA2_128S_IPD        1.3.9999.6.4.16*
-pub const SLH_DSA_SHA2_128S_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.4.16");
+/// Falcon-padded-1024            1.3.9999.3.14*
+pub const OQ_FALCON_PADDED_1024: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.3.14");
 
-/// SLH_DSA_SHA2_192F_IPD    1.3.9999.6.5.10*
-pub const SLH_DSA_SHA2_192F_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.5.10");
+//---------------------------------------------------------------------
+// Definitions are from [draft-ietf-lamps-pq-composite-kem-08](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-08)
+// and [draft-ietf-lamps-pq-composite-sigs-12](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-12).
+//---------------------------------------------------------------------
+pub const ID_MLKEM768_RSA2048_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.55");
+pub const ID_MLKEM768_RSA3072_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.56");
+pub const ID_MLKEM768_RSA4096_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.57");
+pub const ID_MLKEM768_X25519_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.58");
+pub const ID_MLKEM768_ECDH_P256_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.59");
+pub const ID_MLKEM768_ECDH_P384_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.60");
+pub const ID_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.61");
+pub const ID_MLKEM1024_RSA3072_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.62");
+pub const ID_MLKEM1024_ECDH_P384_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.63");
+pub const ID_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.64");
+pub const ID_MLKEM1024_X448_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.65");
+pub const ID_MLKEM1024_ECDH_P521_SHA3_256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.66");
 
-/// SLH_DSA_SHA2_192S_IPD    1.3.9999.6.5.12*
-pub const SLH_DSA_SHA2_192S_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.5.12");
+pub const DS_MLKEM768_RSA2048_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP2048";
+pub const DS_MLKEM768_RSA3072_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP3072";
+pub const DS_MLKEM768_RSA4096_SHA3_256: &[u8; 20] = b"MLKEM768-RSAOAEP4096";
+pub const DS_MLKEM768_X25519_SHA3_256: &[u8; 6] = &hex!("5C2E2F2F5E5C"); // \.//^\
+pub const DS_MLKEM768_ECDH_P256_SHA3_256: &[u8; 13] = b"MLKEM768-P256";
+pub const DS_MLKEM768_ECDH_P384_SHA3_256: &[u8; 13] = b"MLKEM768-P384";
+pub const DS_MLKEM768_ECDH_BRAINPOOL_P256R1_SHA3_256: &[u8; 14] = b"MLKEM768-BP256";
+pub const DS_MLKEM1024_RSA3072_SHA3_256: &[u8; 21] = b"MLKEM1024-RSAOAEP3072";
+pub const DS_MLKEM1024_ECDH_P384_SHA3_256: &[u8; 14] = b"MLKEM1024-P384";
+pub const DS_MLKEM1024_ECDH_BRAINPOOL_P384R1_SHA3_256: &[u8; 15] = b"MLKEM1024-BP384";
+pub const DS_MLKEM1024_X448_SHA3_256: &[u8; 14] = b"MLKEM1024-X448";
+pub const DS_MLKEM1024_ECDH_P521_SHA3_256: &[u8; 14] = b"MLKEM1024-P521";
 
-/// SLH_DSA_SHA2_256F_IPD        1.3.9999.6.6.10*
-pub const SLH_DSA_SHA2_256F_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.6.10");
+pub const ID_MLDSA44_RSA2048_PSS_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.37");
+pub const ID_MLDSA44_RSA2048_PKCS15_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.38");
+pub const ID_MLDSA44_ED25519_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.39");
+pub const ID_MLDSA44_ECDSA_P256_SHA256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.40");
+pub const ID_MLDSA65_RSA3072_PSS_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.41");
+pub const ID_MLDSA65_RSA3072_PKCS15_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.42");
+pub const ID_MLDSA65_RSA4096_PSS_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.43");
+pub const ID_MLDSA65_RSA4096_PKCS15_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.44");
+pub const ID_MLDSA65_ECDSA_P256_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.45");
+pub const ID_MLDSA65_ECDSA_P384_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.46");
+pub const ID_MLDSA65_ECDSA_BRAINPOOL_P256R1_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.47");
+pub const ID_MLDSA65_ED25519_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.48");
+pub const ID_MLDSA87_ECDSA_P384_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.49");
+pub const ID_MLDSA87_ECDSA_BRAINPOOL_P384R1_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.50");
+pub const ID_MLDSA87_ED448_SHAKE256: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.51");
+pub const ID_MLDSA87_RSA3072_PSS_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.52");
+pub const ID_MLDSA87_RSA4096_PSS_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.53");
+pub const ID_MLDSA87_ECDSA_P521_SHA512: ObjectIdentifier =
+    ObjectIdentifier::new_unwrap("1.3.6.1.5.5.7.6.54");
 
-/// SLH_DSA_SHA2_256S_IPD        1.3.9999.6.6.12*
-pub const SLH_DSA_SHA2_256S_IPD: ObjectIdentifier = ObjectIdentifier::new_unwrap("1.3.9999.6.6.12");
-
-/// SLH_DSA_SHAKE_128F_IPD    1.3.9999.6.7.13*
-pub const SLH_DSA_SHAKE_128F_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.9999.6.7.13");
-
-/// SLH_DSA_SHAKE_128S_IPD        1.3.9999.6.7.16*
-pub const SLH_DSA_SHAKE_128S_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.9999.6.7.16");
-
-/// SLH_DSA_SHAKE_192F_IPD    1.3.9999.6.8.10*
-pub const SLH_DSA_SHAKE_192F_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.9999.6.8.10");
-
-/// SLH_DSA_SHAKE_192S_IPD    1.3.9999.6.8.12*
-pub const SLH_DSA_SHAKE_192S_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.9999.6.8.12");
-
-/// SLH_DSA_SHAKE_256F_IPD        1.3.9999.6.9.10*
-pub const SLH_DSA_SHAKE_256F_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.9999.6.9.10");
-
-/// SLH_DSA_SHAKE_256S_IPD        1.3.9999.6.9.12*
-pub const SLH_DSA_SHAKE_256S_IPD: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.9999.6.9.12");
-
-// Old Composite OIDs
-/// COMPOSITE-Signature            1.3.6.1.4.1.18227.2.1
-pub const ENTU_COMPOSITE_SIG: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("1.3.6.1.4.1.18227.2.1");
-
-/// COMPOSITE-KEY                2.16.840.1.114027.80.4.1
-pub const ENTU_COMPOSITE_KEY: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.4.1");
-
-///    id-composite-key OBJECT IDENTIFIER ::= {
-///        joint-iso-itu-t(2) country(16) us(840) organization(1) entrust(114027)
-///        Algorithm(80) Composite(4) CompositeKey(1) }
-pub const ENTU_COMPOSITE_KEY_ID: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.4.1");
-
-///    id-Dilithium3-ECDSA-P256 OBJECT IDENTIFIER ::= {
-///      joint-iso-itu-t(2) country(16) us(840) organization(1) entrust(114027)
-///      algorithm(80) ExplicitCompositeKey(5) id-Dilithium3-ECDSA-P256(1) }
-pub const ENTU_DILITHIUM3_ECDSA_P256: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.1");
-
-///    id-Dilithium3-RSA OBJECT IDENTIFIER ::= {
-///      joint-iso-itu-t(2) country(16) us(840) organization(1) entrust(114027)
-///      algorithm(80) ExplicitCompositeKey(5) id-Dilithium3-RSA(2) }
-pub const ENTU_DILITHIUM3_RSA: ObjectIdentifier =
-    ObjectIdentifier::new_unwrap("2.16.840.1.114027.80.5.2");
+pub const DS_MLDSA44_RSA2048_PSS_SHA256: &[u8; 34] = b"COMPSIG-MLDSA44-RSA2048-PSS-SHA256";
+pub const DS_MLDSA44_RSA2048_PKCS15_SHA256: &[u8; 37] = b"COMPSIG-MLDSA44-RSA2048-PKCS15-SHA256";
+pub const DS_MLDSA44_ED25519_SHA512: &[u8; 30] = b"COMPSIG-MLDSA44-Ed25519-SHA512";
+pub const DS_MLDSA44_ECDSA_P256_SHA256: &[u8; 33] = b"COMPSIG-MLDSA44-ECDSA-P256-SHA256";
+pub const DS_MLDSA65_RSA3072_PSS_SHA512: &[u8; 34] = b"COMPSIG-MLDSA65-RSA3072-PSS-SHA512";
+pub const DS_MLDSA65_RSA3072_PKCS15_SHA512: &[u8; 37] = b"COMPSIG-MLDSA65-RSA3072-PKCS15-SHA512";
+pub const DS_MLDSA65_RSA4096_PSS_SHA512: &[u8; 34] = b"COMPSIG-MLDSA65-RSA4096-PSS-SHA512";
+pub const DS_MLDSA65_RSA4096_PKCS15_SHA512: &[u8; 37] = b"COMPSIG-MLDSA65-RSA4096-PKCS15-SHA512";
+pub const DS_MLDSA65_ECDSA_P256_SHA512: &[u8; 33] = b"COMPSIG-MLDSA65-ECDSA-P256-SHA512";
+pub const DS_MLDSA65_ECDSA_P384_SHA512: &[u8; 33] = b"COMPSIG-MLDSA65-ECDSA-P384-SHA512";
+pub const DS_MLDSA65_ECDSA_BRAINPOOL_P256R1_SHA512: &[u8; 34] =
+    b"COMPSIG-MLDSA65-ECDSA-BP256-SHA512";
+pub const DS_MLDSA65_ED25519_SHA512: &[u8; 30] = b"COMPSIG-MLDSA65-Ed25519-SHA512";
+pub const DS_MLDSA87_ECDSA_P384_SHA512: &[u8; 33] = b"COMPSIG-MLDSA87-ECDSA-P384-SHA512";
+pub const DS_MLDSA87_ECDSA_BRAINPOOL_P384R1_SHA512: &[u8; 34] =
+    b"COMPSIG-MLDSA87-ECDSA-BP384-SHA512";
+pub const DS_MLDSA87_ED448_SHAKE256: &[u8; 30] = b"COMPSIG-MLDSA87-Ed448-SHAKE256";
+pub const DS_MLDSA87_RSA3072_PSS_SHA512: &[u8; 34] = b"COMPSIG-MLDSA87-RSA3072-PSS-SHA512";
+pub const DS_MLDSA87_RSA4096_PSS_SHA512: &[u8; 34] = b"COMPSIG-MLDSA87-RSA4096-PSS-SHA512";
+pub const DS_MLDSA87_ECDSA_P521_SHA512: &[u8; 33] = b"COMPSIG-MLDSA87-ECDSA-P521-SHA512";
