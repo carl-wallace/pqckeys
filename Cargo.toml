@@ -13,8 +13,8 @@ rust-version = "1.85.0"
 [dependencies]
 const-oid = { version = "0.10.2", features = ["db"] }
 der = { version = "0.8.0", features = ["oid", "derive", "alloc"] }
-spki = { version = "0.8.0-rc.4", features = ["alloc"] }
-x509-cert = { version = "0.3.0-rc.4", default-features = false }
+spki = { version = "0.8.0", features = ["alloc"] }
+x509-cert = { version = "0.3.0", default-features = false }
 
 flagset = { version = "0.4.7" }
 
@@ -28,6 +28,3 @@ pem = ["alloc", "der/pem"]
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
-
-[patch.crates-io]
-x509-cert  = { git = "https://github.com/RustCrypto/formats.git" }
